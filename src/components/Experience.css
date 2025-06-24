@@ -1,0 +1,336 @@
+.experience {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+}
+
+.experience-header {
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+}
+
+.experience-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.experience-section h3,
+.education-section h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+/* Timeline Styles */
+.timeline {
+  position: relative;
+  padding-left: var(--spacing-xl);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--primary-blue);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--spacing-xl);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -var(--spacing-xl);
+  top: var(--spacing-lg);
+  width: 16px;
+  height: 16px;
+  background: var(--primary-blue);
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  box-shadow: var(--shadow-light);
+}
+
+.timeline-content {
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+}
+
+.experience-title h4 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--secondary-gray);
+  margin-bottom: var(--spacing-sm);
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.company-name {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--primary-blue);
+}
+
+.company-meta {
+  display: flex;
+  gap: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  color: var(--neutral-gray);
+}
+
+.location,
+.period {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.company-link {
+  color: var(--primary-blue);
+  font-size: var(--font-size-lg);
+  transition: all 0.3s ease;
+}
+
+.company-link:hover {
+  color: var(--primary-blue-dark);
+}
+
+.experience-description {
+  color: var(--neutral-gray);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+.experience-achievements h5 {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--secondary-gray);
+  margin-bottom: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.experience-achievements ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: var(--spacing-lg);
+}
+
+.experience-achievements li {
+  color: var(--neutral-gray);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.experience-achievements li::before {
+  content: '•';
+  color: var(--primary-blue);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.experience-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.tech-badge {
+  background: rgba(0, 120, 212, 0.1);
+  color: var(--primary-blue);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+/* Education Styles */
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.education-item {
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.education-header {
+  margin-bottom: var(--spacing-md);
+}
+
+.education-header h4 {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--secondary-gray);
+  margin-bottom: var(--spacing-sm);
+}
+
+.education-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-size-sm);
+  color: var(--neutral-gray);
+}
+
+.school-name {
+  font-weight: 500;
+  color: var(--primary-blue);
+}
+
+.education-period {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.education-description {
+  color: var(--neutral-gray);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+.education-achievements h5 {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--secondary-gray);
+  margin-bottom: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.education-achievements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.education-achievements li {
+  color: var(--neutral-gray);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xs);
+  padding-left: var(--spacing-md);
+  position: relative;
+}
+
+.education-achievements li::before {
+  content: '•';
+  color: var(--primary-blue);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* CTA Section */
+.experience-cta {
+  text-align: center;
+}
+
+.cta-content {
+  padding: var(--spacing-3xl);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-light);
+}
+
+.cta-content h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--secondary-gray);
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-content p {
+  color: var(--neutral-gray);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-xl);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1024px) {
+  .experience-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+  
+  .timeline {
+    padding-left: var(--spacing-lg);
+  }
+  
+  .timeline-marker {
+    left: -var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-content {
+    gap: var(--spacing-xl);
+  }
+  
+  .timeline-content,
+  .education-item {
+    padding: var(--spacing-lg);
+  }
+  
+  .experience-title h4,
+  .education-header h4 {
+    font-size: var(--font-size-lg);
+  }
+  
+  .company-meta {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .education-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+  
+  .cta-content {
+    padding: var(--spacing-xl);
+  }
+  
+  .cta-content h3 {
+    font-size: var(--font-size-xl);
+  }
+  
+  .cta-content p {
+    font-size: var(--font-size-base);
+  }
+} 
