@@ -172,28 +172,129 @@
   .footer-content {
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+    padding: 0 var(--spacing-md);
   }
   
   .footer-section:first-child {
     grid-column: 1;
   }
   
+  .footer-section h4 {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-md);
+  }
+  
   .footer-logo h3 {
     font-size: var(--font-size-xl);
   }
   
+  .footer-logo p {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .footer-description p {
+    font-size: var(--font-size-xs);
+  }
+  
+  .footer-links button {
+    font-size: var(--font-size-xs);
+  }
+  
   .social-links {
     justify-content: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-base);
   }
   
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
     gap: var(--spacing-sm);
+    padding: 0 var(--spacing-md);
   }
   
   .copyright,
   .made-with {
     font-size: var(--font-size-xs);
+  }
+  
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--spacing-xl) 0 var(--spacing-md);
+  }
+  
+  .footer-content {
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .footer-section h4 {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .footer-logo h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .footer-logo p {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .footer-description p {
+    font-size: var(--font-size-xs);
+    line-height: 1.5;
+  }
+  
+  .footer-links li {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .footer-links button {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) 0;
+  }
+  
+  .social-links {
+    gap: var(--spacing-xs);
+  }
+  
+  .social-link {
+    width: 35px;
+    height: 35px;
+    font-size: var(--font-size-sm);
+  }
+  
+  .footer-bottom-content {
+    gap: var(--spacing-xs);
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .copyright,
+  .made-with {
+    font-size: var(--font-size-xs);
+  }
+  
+  .back-to-top {
+    width: 35px;
+    height: 35px;
+    font-size: var(--font-size-sm);
   }
 } 

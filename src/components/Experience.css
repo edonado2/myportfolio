@@ -297,8 +297,23 @@
 }
 
 @media (max-width: 768px) {
+  .experience {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .experience-header {
+    margin-bottom: var(--spacing-2xl);
+  }
+  
   .experience-content {
     gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .experience-section h3,
+  .education-section h3 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-lg);
   }
   
   .timeline-content,
@@ -309,6 +324,7 @@
   .experience-title h4,
   .education-header h4 {
     font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-xs);
   }
   
   .company-meta {
@@ -318,12 +334,11 @@
   
   .education-meta {
     flex-direction: column;
-    align-items: flex-start;
     gap: var(--spacing-xs);
   }
   
   .cta-content {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-2xl);
   }
   
   .cta-content h3 {
@@ -331,6 +346,101 @@
   }
   
   .cta-content p {
+    font-size: var(--font-size-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .experience {
+    padding: 0 var(--spacing-sm);
+  }
+  
+  .experience-header {
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .experience-content {
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .experience-section h3,
+  .education-section h3 {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .timeline {
+    padding-left: var(--spacing-md);
+  }
+  
+  .timeline-marker {
+    left: -var(--spacing-md);
+    width: 12px;
+    height: 12px;
+    top: var(--spacing-md);
+  }
+  
+  .timeline-content,
+  .education-item {
+    padding: var(--spacing-md);
+  }
+  
+  .experience-title h4,
+  .education-header h4 {
     font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .company-name,
+  .school-name {
+    font-size: var(--font-size-sm);
+  }
+  
+  .company-meta,
+  .education-meta {
+    font-size: var(--font-size-xs);
+  }
+  
+  .experience-description,
+  .education-description {
+    font-size: var(--font-size-sm);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .experience-achievements h5,
+  .education-achievements h5 {
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .experience-achievements li,
+  .education-achievements li {
+    font-size: var(--font-size-xs);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-xs);
+    padding-left: var(--spacing-sm);
+  }
+  
+  .experience-technologies {
+    gap: var(--spacing-xs);
+  }
+  
+  .tech-badge {
+    padding: var(--spacing-xs);
+    font-size: var(--font-size-xs);
+  }
+  
+  .cta-content {
+    padding: var(--spacing-xl);
+  }
+  
+  .cta-content h3 {
+    font-size: var(--font-size-lg);
+  }
+  
+  .cta-content p {
+    font-size: var(--font-size-xs);
   }
 } 

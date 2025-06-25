@@ -58,7 +58,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              Computer Engineering student at Rafael Belloso Chacin University and MERN Stack Developer. 
+              Computer Engineering graduated at Rafael Belloso Chacin University and MERN Stack Developer. 
               Passionate about building responsive web applications with modern technologies. 
               Specialized in MongoDB, Express, React, and Node.js. 
               Creating innovative solutions that deliver exceptional user experiences.
@@ -124,7 +124,7 @@ const Hero = () => {
 {`const developer = {
   name: "Ernesto Donado",
   role: "MERN Stack Developer",
-  education: "Computer Engineering Student",
+  education: "Bs. Computer Engineering ",
   university: "Rafael Belloso Chacin University",
   certifications: ["CS50", "CS50P"],
   skills: ["React", "Node.js", "MongoDB", "Express"],

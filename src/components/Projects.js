@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiGithub, FiExternalLink, FiCode, FiDatabase, FiCloud } from 'react-icons/fi';
+import { 
+  FiGithub, FiExternalLink, FiCode, FiDatabase, FiCloud, 
+  FiSmartphone, FiLayers, FiZap, FiShield, FiStar,
+  FiTool, FiMessageCircle, FiPlay, FiChrome,
+  FiCalendar, FiCheckSquare, FiDroplet, FiCpu
+} from 'react-icons/fi';
 import './Projects.css';
 
 const Projects = () => {
@@ -24,95 +29,145 @@ const Projects = () => {
       id: 1,
       title: 'Brillito App',
       description: 'A comprehensive cleaning services application built with TypeScript and modern web technologies. Features include service booking, real-time tracking, and user management.',
-      image: '/api/placeholder/400/250',
       category: 'fullstack',
       technologies: ['TypeScript', 'React', 'Node.js', 'MongoDB'],
       github: 'https://github.com/edonado2/brillito-app',
       live: 'https://idyllic-pasca-873ae2.netlify.app/',
-      featured: true
+      featured: true,
+      cover: {
+        gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        icon: FiTool,
+        pattern: 'sparkles',
+        color: '#667eea'
+      }
     },
     {
       id: 2,
       title: 'Aqua Nova',
       description: 'Expo mobile application for requesting and managing deliveries. Built with React Native and TypeScript for cross-platform compatibility.',
-      image: '/api/placeholder/400/250',
       category: 'mobile',
       technologies: ['React Native', 'Expo', 'TypeScript', 'Node.js'],
       github: 'https://github.com/edonado2/aqua-nova',
       live: 'https://github.com/edonado2/aqua-nova',
-      featured: true
+      featured: true,
+      cover: {
+        gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+        icon: FiSmartphone,
+        pattern: 'waves',
+        color: '#4facfe'
+      }
     },
     {
       id: 3,
       title: 'Schedule App',
       description: 'Full-stack application to manage appointments using React/TypeScript frontend with Node.js and MongoDB backend.',
-      image: '/api/placeholder/400/250',
       category: 'fullstack',
       technologies: ['React', 'TypeScript', 'Node.js', 'MongoDB'],
       github: 'https://github.com/edonado2/schedule-app',
       live: 'https://github.com/edonado2/schedule-app',
-      featured: true
+      featured: true,
+      cover: {
+        gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+        icon: FiCalendar,
+        pattern: 'dots',
+        color: '#fa709a'
+      }
     },
     {
       id: 4,
       title: 'Organizer App',
       description: 'Task and routine management application built with Vite, React, Tailwind CSS, and GraphQL backend for efficient data management.',
-      image: '/api/placeholder/400/250',
       category: 'web',
       technologies: ['React', 'Vite', 'Tailwind CSS', 'GraphQL'],
       github: 'https://github.com/edonado2/organizer-app',
       live: 'https://github.com/edonado2/organizer-app',
-      featured: false
+      featured: false,
+      cover: {
+        gradient: 'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
+        icon: FiCheckSquare,
+        pattern: 'grid',
+        color: '#a8edea'
+      }
     },
     {
       id: 5,
       title: 'Chroma Social Media',
       description: 'A unique social media app based on colors for user interaction. Built with TypeScript and modern web technologies.',
-      image: '/api/placeholder/400/250',
       category: 'web',
       technologies: ['TypeScript', 'React', 'Node.js', 'MongoDB'],
       github: 'https://github.com/edonado2/chroma-social-media',
       live: 'https://github.com/edonado2/chroma-social-media',
-      featured: false
+      featured: false,
+      cover: {
+        gradient: 'linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%)',
+        icon: FiDroplet,
+        pattern: 'circles',
+        color: '#ff9a9e'
+      }
     },
     {
       id: 6,
       title: 'GPT Chat App',
       description: 'AI-powered chatbot using OpenAI LLM with TypeScript implementation for intelligent conversation capabilities.',
-      image: '/api/placeholder/400/250',
       category: 'web',
       technologies: ['TypeScript', 'React', 'OpenAI API', 'Node.js'],
       github: 'https://github.com/edonado2/gpt-chat-app',
       live: 'https://github.com/edonado2/gpt-chat-app',
-      featured: false
+      featured: false,
+      cover: {
+        gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+        icon: FiCpu,
+        pattern: 'neural',
+        color: '#667eea'
+      }
     },
     {
       id: 7,
       title: 'Web Scraping Chrome Extension',
       description: 'Powerful Chrome extension to scrape images, text, and links from any website with TypeScript implementation.',
-      image: '/api/placeholder/400/250',
       category: 'web',
       technologies: ['TypeScript', 'Chrome Extension API', 'Web Scraping'],
       github: 'https://github.com/edonado2/web-scrapping-chrome-extension',
       live: 'https://github.com/edonado2/web-scrapping-chrome-extension',
-      featured: false
+      featured: false,
+      cover: {
+        gradient: 'linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%)',
+        icon: FiChrome,
+        pattern: 'hexagons',
+        color: '#ffecd2'
+      }
     },
     {
       id: 8,
       title: 'Super Mario Bros Game',
       description: 'Browser version of the popular NES Super Mario Bros game built entirely with JavaScript and HTML5 Canvas.',
-      image: '/api/placeholder/400/250',
       category: 'web',
       technologies: ['JavaScript', 'HTML5 Canvas', 'Game Development'],
       github: 'https://github.com/edonado2/super-mailo-bros-game',
       live: 'https://github.com/edonado2/super-mailo-bros-game',
-      featured: false
+      featured: false,
+      cover: {
+        gradient: 'linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)',
+        icon: FiPlay,
+        pattern: 'pixels',
+        color: '#ff9a9e'
+      }
     }
   ];
 
   const filteredProjects = activeFilter === 'all' 
     ? projects 
     : projects.filter(project => project.category === activeFilter);
+
+  const getCategoryIcon = (category) => {
+    switch (category) {
+      case 'web': return <FiCode />;
+      case 'mobile': return <FiSmartphone />;
+      case 'api': return <FiDatabase />;
+      case 'fullstack': return <FiLayers />;
+      default: return <FiCode />;
+    }
+  };
 
   return (
     <section id="projects" className="projects section">
@@ -170,7 +225,11 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
               whileHover={{ y: -10 }}
             >
-              <div className="project-image">
+              <div className="project-cover" style={{ background: project.cover.gradient }}>
+                <div className={`cover-pattern ${project.cover.pattern}`}></div>
+                <div className="cover-icon">
+                  <project.cover.icon />
+                </div>
                 <div className="project-overlay">
                   <div className="project-links">
                     <motion.a
@@ -196,21 +255,19 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="project-category">
-                  {project.category === 'web' && <FiCode />}
-                  {project.category === 'mobile' && <FiDatabase />}
-                  {project.category === 'api' && <FiCloud />}
-                  {project.category === 'fullstack' && <FiCode />}
-                  {project.category}
+                  {getCategoryIcon(project.category)}
+                  <span>{project.category}</span>
                 </div>
                 {project.featured && (
-                  <div className="featured-badge">Featured</div>
+                  <div className="featured-badge">
+                    <FiStar />
+                    <span>Featured</span>
+                  </div>
                 )}
               </div>
-              
               <div className="project-content">
                 <h3 className="project-title">{project.title}</h3>
                 <p className="project-description">{project.description}</p>
-                
                 <div className="project-technologies">
                   {project.technologies.map((tech, techIndex) => (
                     <span key={techIndex} className="tech-tag">
@@ -225,20 +282,23 @@ const Projects = () => {
 
         <motion.div
           className="projects-cta"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 1.2 }}
         >
           <div className="cta-content glass-effect">
-            <h3>Interested in working together?</h3>
-            <p>Let's discuss your next project and bring your ideas to life.</p>
+            <h3>Ready to Start Your Project?</h3>
+            <p>
+              Let's collaborate to bring your ideas to life with cutting-edge technology 
+              and exceptional user experiences.
+            </p>
             <motion.button
               className="btn btn-primary"
-              onClick={() => document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              Start a Project
+              Get In Touch
             </motion.button>
           </div>
         </motion.div>

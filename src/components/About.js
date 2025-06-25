@@ -42,19 +42,28 @@ const About = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="about-card glass-effect">
-              <h3>Who I Am</h3>
-              <p>
-                I'm Ernesto Donado, a Computer Engineering student at Rafael Belloso Chacin University 
-                and a MERN stack developer passionate about creating responsive and user-friendly web applications. 
-                With expertise in MongoDB, Express, React, and Node.js, I specialize in building 
-                full-stack solutions that solve real-world problems.
-              </p>
-              <p>
-                My journey in web development started with a curiosity about how 
-                modern applications work. Today, I'm dedicated to creating 
-                scalable, maintainable code and delivering exceptional user experiences 
-                that make a difference, combining my academic foundation with practical development skills.
-              </p>
+              <div className="about-avatar-section">
+                <motion.div
+                  className="about-avatar"
+                  whileHover={{ scale: 1.05, rotate: 5 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="avatar-container">
+                    <div className="avatar-image">
+                      <div className="avatar-initials">ED</div>
+                    </div>
+                    <div className="avatar-status"></div>
+                  </div>
+                </motion.div>
+                <div className="about-intro">
+                  <h3>Who I Am</h3>
+                  <p>
+                    Computer Engineering graduate and MERN stack developer passionate about creating 
+                    responsive web applications. I specialize in building full-stack solutions 
+                    that solve real-world problems with clean, efficient code.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="about-card glass-effect">
@@ -108,7 +117,7 @@ const About = () => {
             <h3>Quick Facts</h3>
             <div className="facts-grid">
               <div className="fact">
-                <strong>Education:</strong> Computer Engineering Student
+                <strong>Education:</strong> Computer Engineering
               </div>
               <div className="fact">
                 <strong>University:</strong> Rafael Belloso Chacin University

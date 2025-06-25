@@ -38,7 +38,7 @@ function App() {
           }}
         >
           <div className="logo-circle">
-            <span>AC</span>
+            <span>ED</span>
           </div>
         </motion.div>
         <motion.p

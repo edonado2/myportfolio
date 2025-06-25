@@ -1,6 +1,6 @@
 # Ernesto Donado - MERN Stack Developer Portfolio
 
-A modern, responsive portfolio website showcasing Ernesto Donado's work as a Computer Engineering student and MERN Stack Developer. Built with React, featuring a Microsoft-inspired design combined with Apple aesthetics.
+A modern, responsive portfolio website showcasing Ernesto Donado's work as a Computer Engineer and MERN Stack Developer. Built with React, featuring a Microsoft-inspired design combined with Apple aesthetics.
 
 ## 🌟 Features
 

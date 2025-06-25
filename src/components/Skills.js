@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { 
   FiCode, FiDatabase, FiCloud, FiSmartphone, 
-  FiServer, FiLayers, FiZap, FiShield 
+  FiServer, FiLayers, FiZap, FiShield,
+  FiStar, FiAward, FiCheckCircle, FiTrendingUp
 } from 'react-icons/fi';
 import './Skills.css';
 
@@ -25,55 +26,75 @@ const Skills = () => {
 
   const skillsData = {
     frontend: [
-      { name: 'React.js', level: 95, color: '#61dafb' },
-      { name: 'TypeScript', level: 90, color: '#3178c6' },
-      { name: 'JavaScript (ES6+)', level: 95, color: '#f7df1e' },
-      { name: 'HTML5 & CSS3', level: 90, color: '#e34f26' },
-      { name: 'Next.js', level: 85, color: '#000000' },
-      { name: 'Tailwind CSS', level: 88, color: '#06b6d4' },
-      { name: 'Redux', level: 80, color: '#764abc' },
-      { name: 'GraphQL', level: 75, color: '#e10098' }
+      { name: 'React.js', level: 'Expert', color: '#61dafb', icon: '⚛️', experience: '3+ years' },
+      { name: 'TypeScript', level: 'Advanced', color: '#3178c6', icon: '📘', experience: '2+ years' },
+      { name: 'JavaScript (ES6+)', level: 'Expert', color: '#f7df1e', icon: '🟡', experience: '4+ years' },
+      { name: 'HTML5 & CSS3', level: 'Expert', color: '#e34f26', icon: '🌐', experience: '4+ years' },
+      { name: 'Next.js', level: 'Advanced', color: '#000000', icon: '⚡', experience: '2+ years' },
+      { name: 'Tailwind CSS', level: 'Advanced', color: '#06b6d4', icon: '🎨', experience: '2+ years' },
+      { name: 'Redux', level: 'Intermediate', color: '#764abc', icon: '📦', experience: '2+ years' },
+      { name: 'GraphQL', level: 'Intermediate', color: '#e10098', icon: '🔗', experience: '1+ years' }
     ],
     backend: [
-      { name: 'Node.js', level: 92, color: '#339933' },
-      { name: 'Express.js', level: 90, color: '#000000' },
-      { name: 'Python', level: 85, color: '#3776ab' },
-      { name: 'Django', level: 80, color: '#092e20' },
-      { name: 'FastAPI', level: 75, color: '#009688' },
-      { name: 'REST APIs', level: 90, color: '#ff6b6b' },
-      { name: 'Microservices', level: 82, color: '#4ecdc4' },
-      { name: 'Serverless', level: 78, color: '#ff9ff3' }
+      { name: 'Node.js', level: 'Expert', color: '#339933', icon: '🟢', experience: '3+ years' },
+      { name: 'Express.js', level: 'Advanced', color: '#000000', icon: '🚀', experience: '3+ years' },
+      { name: 'Python', level: 'Advanced', color: '#3776ab', icon: '🐍', experience: '2+ years' },
+      { name: 'Django', level: 'Intermediate', color: '#092e20', icon: '🎯', experience: '1+ years' },
+      { name: 'FastAPI', level: 'Intermediate', color: '#009688', icon: '⚡', experience: '1+ years' },
+      { name: 'REST APIs', level: 'Advanced', color: '#ff6b6b', icon: '🔌', experience: '3+ years' },
+      { name: 'Microservices', level: 'Intermediate', color: '#4ecdc4', icon: '🏗️', experience: '2+ years' },
+      { name: 'Serverless', level: 'Intermediate', color: '#ff9ff3', icon: '☁️', experience: '1+ years' }
     ],
     database: [
-      { name: 'MongoDB', level: 88, color: '#47a248' },
-      { name: 'PostgreSQL', level: 85, color: '#336791' },
-      { name: 'Redis', level: 80, color: '#dc382d' },
-      { name: 'MySQL', level: 82, color: '#00758f' },
-      { name: 'Firebase', level: 85, color: '#ffca28' },
-      { name: 'Prisma ORM', level: 78, color: '#2d3748' }
+      { name: 'MongoDB', level: 'Advanced', color: '#47a248', icon: '🍃', experience: '3+ years' },
+      { name: 'PostgreSQL', level: 'Advanced', color: '#336791', icon: '🐘', experience: '2+ years' },
+      { name: 'Redis', level: 'Intermediate', color: '#dc382d', icon: '🔴', experience: '2+ years' },
+      { name: 'MySQL', level: 'Intermediate', color: '#00758f', icon: '🐬', experience: '2+ years' },
+      { name: 'Firebase', level: 'Advanced', color: '#ffca28', icon: '🔥', experience: '2+ years' },
+      { name: 'Prisma ORM', level: 'Intermediate', color: '#2d3748', icon: '🔧', experience: '1+ years' }
     ],
     cloud: [
-      { name: 'AWS', level: 85, color: '#ff9900' },
-      { name: 'Docker', level: 80, color: '#2496ed' },
-      { name: 'Kubernetes', level: 70, color: '#326ce5' },
-      { name: 'CI/CD', level: 82, color: '#f05032' },
-      { name: 'Terraform', level: 75, color: '#7b42bc' },
-      { name: 'Google Cloud', level: 78, color: '#4285f4' }
+      { name: 'AWS', level: 'Advanced', color: '#ff9900', icon: '☁️', experience: '2+ years' },
+      { name: 'Docker', level: 'Intermediate', color: '#2496ed', icon: '🐳', experience: '2+ years' },
+      { name: 'Kubernetes', level: 'Beginner', color: '#326ce5', icon: '⚓', experience: '1+ years' },
+      { name: 'CI/CD', level: 'Intermediate', color: '#f05032', icon: '🔄', experience: '2+ years' },
+      { name: 'Terraform', level: 'Intermediate', color: '#7b42bc', icon: '🏗️', experience: '1+ years' },
+      { name: 'Google Cloud', level: 'Intermediate', color: '#4285f4', icon: '☁️', experience: '1+ years' }
     ],
     mobile: [
-      { name: 'React Native', level: 80, color: '#61dafb' },
-      { name: 'Flutter', level: 75, color: '#02569b' },
-      { name: 'Progressive Web Apps', level: 85, color: '#4285f4' },
-      { name: 'Mobile UI/UX', level: 78, color: '#ff6b6b' }
+      { name: 'React Native', level: 'Intermediate', color: '#61dafb', icon: '📱', experience: '2+ years' },
+      { name: 'Flutter', level: 'Intermediate', color: '#02569b', icon: '🦋', experience: '1+ years' },
+      { name: 'Progressive Web Apps', level: 'Advanced', color: '#4285f4', icon: '📲', experience: '2+ years' },
+      { name: 'Mobile UI/UX', level: 'Intermediate', color: '#ff6b6b', icon: '🎨', experience: '2+ years' }
     ],
     tools: [
-      { name: 'Git & GitHub', level: 90, color: '#f05032' },
-      { name: 'VS Code', level: 95, color: '#007acc' },
-      { name: 'Figma', level: 75, color: '#f24e1e' },
-      { name: 'Jest Testing', level: 80, color: '#c21325' },
-      { name: 'Webpack', level: 75, color: '#1c78c0' },
-      { name: 'Agile/Scrum', level: 85, color: '#ff6b6b' }
+      { name: 'Git & GitHub', level: 'Expert', color: '#f05032', icon: '📚', experience: '4+ years' },
+      { name: 'VS Code', level: 'Expert', color: '#007acc', icon: '💻', experience: '4+ years' },
+      { name: 'Figma', level: 'Intermediate', color: '#f24e1e', icon: '🎨', experience: '2+ years' },
+      { name: 'Jest Testing', level: 'Intermediate', color: '#c21325', icon: '🧪', experience: '2+ years' },
+      { name: 'Webpack', level: 'Intermediate', color: '#1c78c0', icon: '📦', experience: '2+ years' },
+      { name: 'Agile/Scrum', level: 'Advanced', color: '#ff6b6b', icon: '🔄', experience: '3+ years' }
     ]
+  };
+
+  const getLevelColor = (level) => {
+    switch (level) {
+      case 'Expert': return '#10b981';
+      case 'Advanced': return '#3b82f6';
+      case 'Intermediate': return '#f59e0b';
+      case 'Beginner': return '#ef4444';
+      default: return '#6b7280';
+    }
+  };
+
+  const getLevelIcon = (level) => {
+    switch (level) {
+      case 'Expert': return <FiStar />;
+      case 'Advanced': return <FiTrendingUp />;
+      case 'Intermediate': return <FiCheckCircle />;
+      case 'Beginner': return <FiAward />;
+      default: return <FiCheckCircle />;
+    }
   };
 
   return (
@@ -135,17 +156,20 @@ const Skills = () => {
                 whileHover={{ scale: 1.05, y: -5 }}
               >
                 <div className="skill-header">
-                  <h3 className="skill-name">{skill.name}</h3>
-                  <span className="skill-level">{skill.level}%</span>
+                  <div className="skill-icon">{skill.icon}</div>
+                  <div className="skill-info">
+                    <h3 className="skill-name">{skill.name}</h3>
+                    <span className="skill-experience">{skill.experience}</span>
+                  </div>
+                  <div className="skill-level-badge" style={{ backgroundColor: getLevelColor(skill.level) }}>
+                    {getLevelIcon(skill.level)}
+                    <span>{skill.level}</span>
+                  </div>
                 </div>
-                <div className="skill-progress">
-                  <motion.div
-                    className="skill-progress-bar"
-                    initial={{ width: 0 }}
-                    animate={inView ? { width: `${skill.level}%` } : {}}
-                    transition={{ duration: 1, delay: 1 + index * 0.1 }}
-                    style={{ backgroundColor: skill.color }}
-                  />
+                <div className="skill-tags">
+                  <span className="skill-tag" style={{ backgroundColor: skill.color + '20', color: skill.color }}>
+                    {skill.name}
+                  </span>
                 </div>
               </motion.div>
             ))}
