@@ -181,7 +181,7 @@ img, video, iframe {
 .section-subtitle {
   font-family: var(--font-family);
   font-size: var(--font-size-lg);
-  color: var(--neutral-gray);
+  color: var(--secondary-gray);
   text-align: center;
   margin-bottom: var(--spacing-2xl);
   max-width: 600px;
