@@ -7,7 +7,7 @@
 /coverage
 
 # Production
-/build
+# /build  # Commented out to allow tracking build folder for deployment
 
 # Misc
 .DS_Store
@@ -114,7 +114,4 @@ temp/
 # OS generated files
 Thumbs.db
 ehthumbs.db
-Desktop.ini
-
-# Formspree setup guide (optional - remove if you want to track it)
-FORMSPREE_SETUP.md 
+Desktop.ini 
